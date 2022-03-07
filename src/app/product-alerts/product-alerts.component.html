@@ -1,0 +1,11 @@
+<p *ngIf="product && product.price > 700">
+  <button type="button" (click)="notify.emit()">Notify me</button>
+</p>
+
+<p *ngIf="product && product.stock > 0">
+  <button type="button" (click)="checkStock.emit()">Available now</button>
+</p>
+
+<p *ngIf="product && product.stock == 0">
+  <button type="button" >Out of Stock</button>
+</p>

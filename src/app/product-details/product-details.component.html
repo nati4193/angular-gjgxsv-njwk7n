@@ -1,0 +1,19 @@
+<h2>Product Detail</h2>
+
+<div *ngIf="product && product.stock > 0">
+  <h3>{{ product.name | uppercase }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <p>{{ product.stock }} items lefts</p>
+  <button type="button" (click)="addToCart(product)">Buy</button>
+</div>
+
+<div *ngIf="product && product.stock == 0">
+  <h3>{{ product.name | uppercase}}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+  <p>Out of stock</p>
+  
+</div>
+
+
